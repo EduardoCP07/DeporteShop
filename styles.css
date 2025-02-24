@@ -130,6 +130,23 @@ button:hover {
     background-color: #128C7E; /* Verde más oscuro al pasar el mouse */
 }
 
+/* Estilos para el botón "Atrás" */
+.back-button {
+    padding: 10px 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px; /* Espacio debajo del botón */
+}
+
+.back-button:hover {
+    background-color: #cccccc; /* Fondo gris claro al pasar el mouse */
+}
+
 /* Estilos para el logo en la parte inferior central */
 .logo-container {
     position: fixed; /* Fija el logo en la pantalla */

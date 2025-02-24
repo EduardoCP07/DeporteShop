@@ -1,8 +1,12 @@
 // Función para mostrar uniformes según el precio seleccionado
 function mostrarUniformes(precio) {
+    const folderContainer = document.getElementById('folder-container');
     const catalogoUniformes = document.getElementById('catalogo_uniformes');
     const listaUniformes = document.getElementById('lista_uniformes');
     const tituloCarpeta = document.getElementById('titulo_carpeta');
+
+    // Ocultar las carpetas de precios
+    folderContainer.style.display = "none";
 
     // Mostrar el contenedor de uniformes
     catalogoUniformes.style.display = "block";
@@ -44,6 +48,18 @@ function mostrarUniformes(precio) {
     } else {
         listaUniformes.innerHTML = "<p>No hay uniformes en esta categoría.</p>";
     }
+}
+
+// Función para regresar a las carpetas de precios
+function regresarACarpetas() {
+    const folderContainer = document.getElementById('folder-container');
+    const catalogoUniformes = document.getElementById('catalogo_uniformes');
+
+    // Ocultar el contenedor de uniformes
+    catalogoUniformes.style.display = "none";
+
+    // Mostrar las carpetas de precios
+    folderContainer.style.display = "flex";
 }
 
 // Función para abrir WhatsApp con tallas y cantidades

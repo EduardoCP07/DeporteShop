@@ -15,7 +15,7 @@
             <button onclick="window.location.href='admin.html'">Ir a Administración</button>
         </div>
 
-        <!-- Carpeta de precios fija en la parte superior -->
+        <!-- Carpeta de precios (se oculta cuando se selecciona una categoría) -->
         <div class="folder-container" id="folder-container">
             <div class="folder" onclick="mostrarUniformes(220)">
                 <h2>Uniformes de $220</h2>
@@ -40,6 +40,8 @@
 
         <!-- Contenedor para mostrar los uniformes de la carpeta seleccionada -->
         <div class="catalogo" id="catalogo_uniformes" style="display: none;">
+            <!-- Botón "Atrás" para regresar a las carpetas de precios -->
+            <button class="back-button" onclick="regresarACarpetas()">Atrás</button>
             <h2 id="titulo_carpeta"></h2>
             <div id="lista_uniformes" class="catalogo"></div>
         </div>
@@ -47,7 +49,7 @@
 
     <!-- Logo en la parte inferior central -->
     <div class="logo-container">
-        <img src="C:\Users\EDUARDO\Downloads\Logo/DeporteShop.jpg" alt="Logo Deporte Shop">
+        <img src="Logo/DeporteShop.jpg" alt="Logo Deporte Shop">
     </div>
 
     <script src="scripts.js"></script>
