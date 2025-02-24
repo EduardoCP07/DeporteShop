@@ -37,12 +37,13 @@ button {
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     margin: 5px; /* Espacio entre botones */
 }
 
 button:hover {
     background-color: #cccccc; /* Fondo gris claro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de escala al hacer hover */
 }
 
 .folder-container {
@@ -57,6 +58,7 @@ button:hover {
     z-index: 100; /* Asegura que esté por encima del contenido */
     padding: 10px; /* Espaciado interno */
     border-bottom: 2px solid #333333; /* Borde inferior para separar del contenido */
+    transition: opacity 0.3s ease; /* Transición al ocultar/mostrar */
 }
 
 .folder {
@@ -65,11 +67,12 @@ button:hover {
     background-color: #333333; /* Fondo gris oscuro */
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .folder:hover {
     background-color: #444444; /* Fondo gris medio al pasar el mouse */
+    transform: scale(1.05); /* Efecto de escala al hacer hover */
 }
 
 .catalogo {
@@ -88,11 +91,12 @@ button:hover {
     padding: 15px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
-    transition: transform 0.2s;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .item:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Efecto de escala al hacer hover */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Sombra más pronunciada */
 }
 
 .item img {
@@ -123,11 +127,12 @@ button:hover {
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .cotizar-btn:hover {
     background-color: #128C7E; /* Verde más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de escala al hacer hover */
 }
 
 /* Estilos para el botón "Atrás" */
@@ -139,12 +144,13 @@ button:hover {
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     margin-bottom: 20px; /* Espacio debajo del botón */
 }
 
 .back-button:hover {
     background-color: #cccccc; /* Fondo gris claro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de escala al hacer hover */
 }
 
 /* Estilos para el logo en la parte inferior central */
@@ -159,4 +165,56 @@ button:hover {
 .logo-container img {
     max-width: 150px; /* Ajusta el tamaño del logo */
     height: auto;
+    transition: transform 0.2s ease;
+}
+
+.logo-container img:hover {
+    transform: scale(1.1); /* Efecto de escala al hacer hover */
+}
+
+/* Estilos para el footer y los íconos de redes sociales */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a; /* Fondo gris oscuro */
+    padding: 10px 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre íconos */
+}
+
+.social-icon {
+    color: #ffffff; /* Color blanco */
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+    color: #25D366; /* Color verde de WhatsApp al hacer hover */
+    transform: scale(1.2); /* Efecto de escala al hacer hover */
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .folder-container {
+        flex-direction: column; /* Apila las carpetas en pantallas pequeñas */
+    }
+
+    .folder {
+        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    }
+
+    .item {
+        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    }
+
+    .logo-container img {
+        max-width: 100px; /* Reduce el tamaño del logo en móviles */
+    }
 }
