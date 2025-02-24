@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Catálogo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Administración de Catálogo</h1>
+
+        <!-- Botón de cerrar sesión -->
+        <div class="button-container">
+            <button onclick="cerrarSesion()">Cerrar Sesión</button>
+        </div>
+
+        <!-- Formulario para agregar uniformes -->
+        <div class="form-container">
+            <input type="number" id="precio" placeholder="Precio (ej. 290)">
+            <input type="file" id="imagen" accept="image/*" multiple>
+            <textarea id="descripcion" placeholder="Descripción del Uniforme" rows="4"></textarea>
+
+            <button onclick="agregarUniformes()">Agregar Uniformes</button>
+        </div>
+
+        <!-- Botón para volver al catálogo -->
+        <div class="button-container">
+            <button onclick="window.location.href='index.html'">Volver al Catálogo</button>
+        </div>
+
+        <!-- Lista de uniformes cargados -->
+        <h2>Uniformes Cargados</h2>
+        <div class="catalogo" id="catalogo"></div>
+    </div>
+</body>
+</html>

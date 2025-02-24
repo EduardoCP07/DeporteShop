@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login de Administrador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login de Administrador</h1>
+        <div class="login-container">
+            <input type="text" id="usuario" placeholder="Usuario">
+            <input type="password" id="password" placeholder="Contraseña">
+            <button onclick="verificarLogin()">Iniciar Sesión</button>
+        </div>
+        <div class="button-container">
+            <button onclick="window.location.href='index.html'">Volver al Catálogo</button>
+        </div>
+    </div>
+
+    <script>
+        function verificarLogin() {
+            const usuario = document.getElementById('usuario').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            // Credenciales de acceso (puedes cambiarlas)
+            const adminUser = "admin";
+            const adminPass = "1234";
+
+            if (usuario === adminUser && password === adminPass) {
+                localStorage.setItem("adminLogueado", "true");
+                window.location.href = "admin.html"; // Redirige a la administración
+            } else {
+                alert("Usuario o contraseña incorrectos.");
+            }
+        }
+    </script>
+</body>
+</html>

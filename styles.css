@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Para posicionar el logo correctamente */
+    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la pantalla */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1a1a1a; /* Fondo gris oscuro */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Sombra suave */
+    position: relative; /* Para que el contenido no se solape con el logo */
+    z-index: 1; /* Asegura que el contenido esté por encima del logo */
+}
+
+h1, h2 {
+    color: #ffffff; /* Texto blanco */
+}
+
+.button-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000; /* Texto negro */
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 5px; /* Espacio entre botones */
+}
+
+button:hover {
+    background-color: #cccccc; /* Fondo gris claro al pasar el mouse */
+}
+
+.folder-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    position: sticky; /* Hace que las carpetas se mantengan fijas */
+    top: 0; /* Se mantienen en la parte superior */
+    background-color: #1a1a1a; /* Fondo gris oscuro para que no se vea el contenido detrás */
+    z-index: 100; /* Asegura que esté por encima del contenido */
+    padding: 10px; /* Espaciado interno */
+    border-bottom: 2px solid #333333; /* Borde inferior para separar del contenido */
+}
+
+.folder {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #333333; /* Fondo gris oscuro */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.folder:hover {
+    background-color: #444444; /* Fondo gris medio al pasar el mouse */
+}
+
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-top: 20px; /* Espacio entre las carpetas y los uniformes */
+}
+
+.item {
+    background-color: #1a1a1a; /* Fondo gris oscuro */
+    border: 1px solid #333333; /* Borde gris oscuro */
+    border-radius: 10px;
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.tallas-container {
+    margin-top: 10px;
+}
+
+.tallas-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.tallas-container input {
+    width: 50px;
+    margin-left: 10px;
+}
+
+.cotizar-btn {
+    margin-top: 10px;
+    background-color: #25D366; /* Color verde de WhatsApp */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cotizar-btn:hover {
+    background-color: #128C7E; /* Verde más oscuro al pasar el mouse */
+}
+
+/* Estilos para el logo en la parte inferior central */
+.logo-container {
+    position: fixed; /* Fija el logo en la pantalla */
+    bottom: 20px; /* Distancia desde la parte inferior */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta el centrado */
+    z-index: 0; /* Asegura que el logo esté detrás del contenido */
+}
+
+.logo-container img {
+    max-width: 150px; /* Ajusta el tamaño del logo */
+    height: auto;
+}
